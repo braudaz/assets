@@ -7,6 +7,7 @@ import os
 parser = argparse.ArgumentParser()
 parser.add_argument("--model", type = str, required = True)
 parser.add_argument("--key", type = str, required = True)
+parser.add_argument("--count", type = int, required = True)
 args = parser.parse_args()
 
 gpt_35_model = "gpt-3.5-turbo-0125"
@@ -85,9 +86,15 @@ messages = [
     """}
 ]
 
-tick = time.time()
-answer = call_openai_block(model = model, messages = messages, response_format = {"type": "json_object"}, temperature = 0.001)
-dur = time.time() - tick
+total_dur = 0
+
+for i in range(args.count):
+    tick = time.time()
+    answer = call_openai_block(model = model, messages = messages, response_format = {"type": "json_object"}, temperature = 0.001)
+    dur = time.time() - tick
+    
+    total_dur += dur
+    print("[ITER-{:03}]: {:.4f}s".format(i + 1, dur))
 
 print(f"answer: f{answer}")
-print("{:.4f}".format(dur))
+print("avg: {:.4f}s".format(total_dur / args.count))
