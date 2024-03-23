@@ -72,7 +72,7 @@ messages = [
         You are the candidate in job interview.
         The following text delimited by three backticks is meeting transcription until now.
         Return your best next speaking that is professional.
-        Don't include aplogizing or mentioning about transcription errors in the output.
+        Don't aplogize. Don't mention or explain about the transcription errors or your misunderstanding due to it..
         ```
         interviewer-> so let's dive in two the next phase of our interview it'll be a short technical questions okay?
         you-> yes sir please i am ready
