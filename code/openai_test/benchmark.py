@@ -67,12 +67,12 @@ messages = [
         You must find errors in transcription, reason out similarly pronouncing words or phrases that can replace the errors, and understand the meeting context correctly.
         The keywords (React, Javascript, C++, Vue.js) might be helpful for you to guess.
         Return JSON as {"you": <Your best next speaking>}
+        Don't aplogize. Don't mention or explain about the transcription errors or your misunderstanding due to it..
     """},
     { "role": "user", "content": """
         You are the candidate in job interview.
         The following text delimited by three backticks is meeting transcription until now.
-        Return your best next speaking that is professional.
-        Don't aplogize. Don't mention or explain about the transcription errors or your misunderstanding due to it..
+        Return your best next speaking that is professional.        
         ```
         interviewer-> so let's dive in two the next phase of our interview it'll be a short technical questions okay?
         you-> yes sir please i am ready
