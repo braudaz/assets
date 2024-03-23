@@ -66,13 +66,12 @@ messages = [
         The provided meeting transcription has errors because it's transcribed by AI.
         You must find errors in transcription, reason out similarly pronouncing words or phrases that can replace the errors, and understand the meeting context correctly.
         The keywords (React, Javascript, C++, Vue.js) might be helpful for you to guess.
-        Return JSON as {"you": <Your best next speaking>}
-        Don't aplogize. Don't mention or explain about the transcription errors or your misunderstanding due to it..
+        Don't aplogize. Don't mention or explain about the transcription errors or your misunderstanding due to it.
     """},
     { "role": "user", "content": """
         You are the candidate in job interview.
         The following text delimited by three backticks is meeting transcription until now.
-        Return your best next speaking that is professional.        
+        Return your best next speaking that is professional.
         ```
         interviewer-> so let's dive in two the next phase of our interview it'll be a short technical questions okay?
         you-> yes sir please i am ready
@@ -91,7 +90,7 @@ total_dur = 0
 
 for i in range(args.count):
     tick = time.time()
-    answer = call_openai_block(model = model, messages = messages, response_format = {"type": "json_object"}, temperature = 0.001, max_token = 200)
+    answer = call_openai_block(model = model, messages = messages, temperature = 0.001, max_token = 200)
     dur = time.time() - tick
     
     total_dur += dur
