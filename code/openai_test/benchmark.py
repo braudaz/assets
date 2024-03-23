@@ -90,7 +90,7 @@ total_dur = 0
 
 for i in range(args.count):
     tick = time.time()
-    answer = call_openai_block(model = model, messages = messages, response_format = {"type": "json_object"}, temperature = 0.001)
+    answer = call_openai_block(model = model, messages = messages, response_format = {"type": "json_object"}, temperature = 0.001, max_token = 200)
     dur = time.time() - tick
     
     total_dur += dur
