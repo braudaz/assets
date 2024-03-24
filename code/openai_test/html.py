@@ -106,7 +106,7 @@ total_dur = 0
 
 for i in range(args.count):
     tick = time.time()
-    answer = call_openai_block(model = model, messages = messages, temperature = 0.001, max_token = 200)
+    answer = call_openai_block(model = model, messages = messages, temperature = 0.001)
     dur = time.time() - tick
     
     total_dur += dur
