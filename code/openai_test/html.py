@@ -81,7 +81,13 @@ messages = [
                 ...
             ],
             "check-fields": [
-                "label": <Label description for this check field.>,
+                {
+                    "label": <Label description for this check field.>,
+                    "choices": [
+                        <choice>,
+                        ...
+                    ]
+                },
                 ...
             ]
         }
