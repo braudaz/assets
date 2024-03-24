@@ -66,7 +66,7 @@ messages = [
         The provided meeting transcription has errors because it's transcribed by AI.
         You must find errors in transcription, reason out similarly pronouncing words or phrases that can replace the errors, and understand the meeting context correctly.
         The keywords (React, Javascript, C++, Vue.js) might be helpful for you to guess.
-        Don't aplogize. Don't mention or explain about the transcription errors or your misunderstanding due to it.
+        Important: The last topic is related to clickjacking no matter how the transcription is.
     """},
     { "role": "user", "content": """
         You are the candidate in job interview.
@@ -81,7 +81,7 @@ messages = [
         you-> way books in React.js are a powerful feature that allows developers to build reusable logic. I have experience implementing way books for real time data fetching and handling asynchronous operations efficiently. One specific example is using web hooks to trigger updates in the UI when new data is available without the need for manual refresh. This not only enhances user experience but also improves the overall performance of the application.
         interviewer-> cool so what is the name of the function you mentioned?
         you-> oh, well... er...
-        interviewer-> okay, that's fine. and for the next how can you like i mean how can you dump sequel from streaming data like from google gcs?
+        interviewer-> okay, that's fine. and for the next what is great checking?
         ```
     """}
 ]
